@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@media print {
+  /* Hide standard layout wrapper, action panels, and navigation rails completely */
+  #nav_top_rail,
+  #main_dashboard_body,
+  #receipt_preview_modal_overlay,
+  #pdf_preview_modal_overlay,
+  #ai_loading_overlay,
+  #delete_confirm_modal_overlay,
+  footer {
+    display: none !important;
+  }
+
+  /* Force the root wrapper to use normal block display to prevent flex layout height clipping */
+  #smart_quote_root_wrapper {
+    display: block !important;
+    background: white !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  /* Make sure printing boards are fully unrolled, positioned relatively, of fluid height, and take up 100% physical area */
+  #pdf_invoice_printing_board,
+  #pdf_receipt_printing_board {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    color: black !important;
+    z-index: auto !important;
+  }
+
+  /* Force background colors and borders to print in all browsers */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+@page {
+  size: portrait;
+  margin: 15mm;
+}
+

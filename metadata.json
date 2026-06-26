@@ -1,0 +1,6 @@
+{
+  "name": "Gestão de Orçamentos e Clientes",
+  "description": "Sistema moderno para cadastro de orçamentos, consulta de CPF/CNPJ via API, exportação em PDF, integração automática com fornecedores e painel financeiro em tempo real.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
